@@ -1,49 +1,12 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
+import ProfessorPopup from './ProfessorPopup';
 
-const professors = [
-  {
-    name: "Oded Netzer",
-    date: "2nd August, Sunday",
-    topic: "Leadership Intelligence in an AI Era: Developing Quantitative Intuition",
-    school: "Columbia Business School",
-    image: "/professor-profile/oded.jpg",
-    schoolLogo: "/professor-school/oded-school.png"
-  },
-  {
-    name: "Niro Sivanathan",
-    date: "6th September, Sunday",
-    topic: "Negotiations, Influence, and Decision-making",
-    school: "London Business School",
-    image: "/professor-profile/niro.png",
-    schoolLogo: "/professor-school/niro-school.png"
-  },
-  {
-    name: "Jonathan Levav",
-    date: "27th September, Sunday",
-    topic: "Understanding consumer's judgments and choices",
-    school: "Stanford Business School",
-    image: "/professor-profile/jon.jpg",
-    schoolLogo: "/professor-school/jon-school.png"
-  },
-  {
-    name: "Dave Weiner",
-    date: "End October",
-    topic: "Customer discovery",
-    school: "University California Berkeley",
-    image: "/professor-profile/dave.jpg",
-    schoolLogo: "/professor-school/dave-school.jpg"
-  },
-  {
-    name: "Danny Warshay",
-    date: "10th January, Sunday",
-    topic: "Turn unsolved problems into entrepreneurial successes",
-    school: "Brown University",
-    image: "/professor-profile/danny.jpg",
-    schoolLogo: "/professor-school/danny-school.jpg"
-  }
-];
+import { professors } from '../data/professors';
 
 const Firstprinciple = () => {
+  const [selectedProf, setSelectedProf] = useState(null);
+
   return (
     <section className="py-20 px-4 bg-white font-inter flex flex-col items-center justify-center">
       <div className="max-w-7xl mx-auto text-center mb-[50px]">
@@ -59,7 +22,7 @@ const Firstprinciple = () => {
 
       <div className="max-w-[1100px] mx-auto flex flex-wrap justify-center gap-[15px]">
         {professors.map((prof, index) => (
-          <ProfessorCard key={index} prof={prof} />
+          <ProfessorCard key={index} prof={prof} onClick={() => setSelectedProf(prof)} />
         ))}
       </div>
 
@@ -68,13 +31,22 @@ const Firstprinciple = () => {
           More of the best professors being added soon
         </p>
       </div>
+
+      {/* Modal Popup Component */}
+      <ProfessorPopup 
+        prof={selectedProf} 
+        onClose={() => setSelectedProf(null)} 
+      />
     </section>
   );
 };
 
-const ProfessorCard = ({ prof }) => {
+const ProfessorCard = ({ prof, onClick }) => {
   return (
-    <div className="flex flex-col bg-white border-[1.91px] border-[#E5E5E5] overflow-hidden w-[350px] h-[470px]">
+    <div 
+      className="flex flex-col bg-white border-[1.91px] border-[#E5E5E5] overflow-hidden w-[350px] h-[470px] cursor-pointer hover:shadow-lg transition-shadow group"
+      onClick={onClick}
+    >
       {/* Image Area */}
       <div className="relative h-[360px] bg-zinc-100 overflow-hidden">
         {/* Logo Overlay */}
@@ -90,7 +62,7 @@ const ProfessorCard = ({ prof }) => {
         <img
           src={prof.image}
           alt={prof.name}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 

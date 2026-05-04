@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Tagline from "@/components/Tagline";
 import Different from "@/components/Different";
 import WhatWeAre from "@/components/WhatWeAre";
+import Firstprinciple from "@/components/Firstprinciple";
 import Membership from "@/components/Membership";
 import Footer from "@/components/Footer";
 
@@ -12,8 +13,8 @@ export default function Home() {
       <Tagline />
       <Different />
       <WhatWeAre />
+      <Firstprinciple />
       <Membership />
-      <Footer />
     </main>
   );
 }

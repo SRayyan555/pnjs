@@ -11,7 +11,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="text-center z-10 px-4 flex items-center justify-center h-full">
         <h1 

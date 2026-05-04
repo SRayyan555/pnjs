@@ -10,6 +10,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-inter: var(--font-inter);
+  --font-inter-display: var(--font-inter-display);
+  --font-serif: var(--font-serif);
+  --font-kepler: 'Kepler Std', serif;
+  --font-mencken: 'Mencken Std', serif;
 }
 
 @media (prefers-color-scheme: dark) {

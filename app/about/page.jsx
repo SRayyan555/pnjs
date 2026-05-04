@@ -5,7 +5,7 @@ export default function About() {
   return (
     <main className="min-h-screen flex flex-col">
       <div className="relative h-[40vh] bg-zinc-900">
-        <Navbar />
+  
         <div className="flex items-center justify-center h-full pt-20">
           <h1 className="text-6xl font-black text-white uppercase italic">About Us</h1>
         </div>
@@ -17,7 +17,6 @@ export default function About() {
           </p>
         </div>
       </section>
-      <Footer />
     </main>
   );
 }

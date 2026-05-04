@@ -52,7 +52,7 @@ const Firstprinciple = () => {
           <span className="font-extrabold text-[#c01823] font-mencken text-[72px] leading-[110%] tracking-[-0.46px] align-middle">Principles</span>
         </h2>
         <p className="text-[24px] md:text-[25px] text-[#333333] md:w-[1080px] md:h-[62px]  leading-[120%] font-semibold font-inter">
-          A series of problem solving workshops held by the worlds best professors. The workshops 
+          A series of problem solving workshops held by the worlds best professors. The workshops
           are being designed to be a collaborative feedback loop and not a monologue
         </p>
       </div>
@@ -63,8 +63,8 @@ const Firstprinciple = () => {
         ))}
       </div>
 
-      <div className="mt-20 text-center">
-        <p className="text-3xl md:text-4xl font-serif italic text-[#C41E3A]">
+      <div className="mt-[60px] text-center">
+        <p className="font-kepler font-medium italic text-[50px] leading-[100%] tracking-[0px] text-[#C01823]">
           More of the best professors being added soon
         </p>
       </div>
@@ -79,21 +79,21 @@ const ProfessorCard = ({ prof }) => {
       <div className="relative h-[360px] bg-zinc-100 overflow-hidden">
         {/* Logo Overlay */}
         <div className="absolute top-4 left-4 w-[45px] h-[45px] z-10 rounded-[4px] flex items-center justify-center">
-           <img 
-             src={prof.schoolLogo} 
-             alt={`${prof.school} logo`}
-             className="w-full h-full object-contain rounded-[4px]"
-           />
+          <img
+            src={prof.schoolLogo}
+            alt={`${prof.school} logo`}
+            className="w-full h-full object-contain rounded-[4px]"
+          />
         </div>
-        
+
         {/* Background image */}
-        <img 
-          src={prof.image} 
+        <img
+          src={prof.image}
           alt={prof.name}
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-        
+
         {/* Name and Date Overlay */}
         <div className="absolute bottom-2 left-0 right-0 text-center text-white font-inter">
           <h3 className="text-[24px] leading-[140%] font-semibold tracking-tight font-inter">{prof.name}</h3>
@@ -106,12 +106,12 @@ const ProfessorCard = ({ prof }) => {
         <p className="text-[18px] font-medium leading-[1.2] text-[#333333] mb-[10px] font-inter-display tracking-[-0.5px]">
           {prof.topic}
         </p>
-        
+
         {/* School Info */}
         <div className="mt-auto flex items-center gap-3 font-inter">
-          <img 
-            src={prof.schoolLogo} 
-            alt="" 
+          <img
+            src={prof.schoolLogo}
+            alt=""
             className="w-[30px] h-[30px] rounded-[4px] object-contain"
           />
           <span className="text-[19px] leading-[140%] font-regular text-black font-inter">{prof.school}</span>

@@ -12,11 +12,7 @@ export default function Tagline() {
       <div className=" relative z-10 flex flex-col gap-[163px]">
         {/* Upper Tagline */}
         <h2 
-          className="font-[family-name:var(--font-inter)] font-[700] text-[66px] leading-[120%]"
-          style={{ 
-            letterSpacing: "-1.46px",
-            textAlign: "center"
-          }}
+          className="font-[family-name:var(--font-inter)] font-[700] md:text-[66px] text-[35px] leading-[120%] tracking-[-1.46px] text-center"
         >
           a network for ambitious professionals <br />
           who are coming together to <br />
@@ -25,11 +21,7 @@ export default function Tagline() {
 
         {/* Lower Section Text */}
         <div 
-          className="font-[family-name:var(--font-inter-display)] font-[400] text-[50px] leading-[100%] flex items-center justify-center gap-4"
-          style={{ 
-            letterSpacing: "-0.5px",
-            textAlign: "center"
-          }}
+          className="font-[family-name:var(--font-inter-display)] text-center tracking-[-0.5px]  font-[400] text-[20px] md:text-[50px] leading-[100%] flex items-center justify-center gap-4"
         >
           <span>Learn. Solve.</span>
           <span className="bg-red-600 font-bold px-4 py-1 inline-block">

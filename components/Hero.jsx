@@ -15,7 +15,7 @@ export default function Hero() {
 
       <div className="text-center z-10 px-4 flex items-center justify-center h-full">
         <h1 
-          className="font-[family-name:var(--font-inter-display)] font-[800] text-[130px] leading-[100%] lowercase"
+          className="font-[family-name:var(--font-inter-display)] font-[800] md:text-[130px] text-[60px] leading-[100%] lowercase"
           style={{ 
             letterSpacing: "-4px",
             textAlign: "center",

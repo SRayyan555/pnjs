@@ -3,13 +3,17 @@ import Navbar from "./Navbar";
 export default function Hero() {
   return (
     <section className="relative h-screen flex flex-col items-center justify-center text-white overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center z-0"
-        style={{ backgroundImage: "url('/assets/hero.png')" }}
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <div className="absolute inset-0 bg-black/20"></div>
-      </div>
+        <source src="/assets/video/hero.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-black/40 z-[1]"></div>
 
       {/* <Navbar /> */}
 

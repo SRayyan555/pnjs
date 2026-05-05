@@ -7,7 +7,7 @@ export const professors = [
     image: "/professor-profile/oded.jpg",
     schoolLogo: "/professor-school/oded-school.png",
     location: "Mumbai",
-    description: "The challenge today is not a lack of information (or analytics, dashboards, and AI outputs), but the judgment to use it well. What distinguishes leaders who consistently make smart..."
+    description: "The challenge today is not a lack of information (or analytics, dashboards, and AI outputs), but the judgment to use it well. What distinguishes leaders who consistently make smart decisions is their ability to quickly sort through signal and noise by asking essential questions, pressure-testing assumptions, and validating claims, not with statistical rigor, but from a business validity perspective. This form of leadership intelligence has become all the more important in the AI era. This session equips leaders to engage with AI productively. It teaches Quantitative Intuition (QI), a practical framework and set of rapid-response tools for making better decisions in a data-driven world where AI is accelerating answers but not necessarily improving judgment. Participants will learn to frame issues with precision before rushing to solutions, develop intuition for numbers using pragmatic methods and apply contextual lenses to assess relevance, risk, and trust when information is incomplete."
   },
   {
     name: "Niro Sivanathan",
@@ -17,17 +17,25 @@ export const professors = [
     image: "/professor-profile/niro.png",
     schoolLogo: "/professor-school/niro-school.png",
     location: "Mumbai",
-    description: "The challenge today is not a lack of information (or analytics, dashboards, and AI outputs), but the judgment to use it well. What distinguishes leaders who consistently make smart..."
+    description: `In an era defined by rapid technological shifts and complex market dynamics, the ability to secure favorable terms, influence key stakeholders, and architect robust deals is paramount. Privé is designed for the ambitious and the restless—those seeking to protect their legacy while remaining future-ready. Aligning with Privé’s mission to solve high-stakes problems through "First Principles" peer learning, this intensive 1-day masterclass distills the science of negotiation and influence into actionable strategies for ultra-high-net-worth individuals, family board members, and top-tier professionals. The curriculum is structured around two core pillars: the cognitive psychology of influence and the strategic architecture of deal-making.
+
+THE COGNITIVE PSYCHOLOGY OF INFLUENCE
+The morning sessions focus on the psychological mechanisms that drive decision-making at the bargaining table and in the boardroom. Members will explore how the framing and presentation of information can be leveraged to nudge counterparts toward desired outcomes. For family business owners navigating succession, or startup founders pitching to institutional investors, mastering these tools ensures that proposals are structured to maximize acceptance and reduce friction. The focus is on acting as an agenda-setter rather than a reactive participant.
+
+STRATEGIC DEAL ARCHITECTURE AND VALUE CREATION
+The afternoon transitions into the mechanics of negotiation. Participants will engage in dynamic simulation that mirror the high-stakes environments of private capital and enterprise leadership. Members will learn to uncover hidden interests and structure agreements that bridge valuation gaps and align long-term incentives. Drawing on extensive advisory experience in the private capital ecosystem—including complex exits, acquisitions, and strategic negotiations ranging from $35M to $2B USD—the session provides deep insights into liquidity events and M&A dynamics. This is particularly relevant for family offices and owners looking to scale operations, manage syndicate investments, without compromising their core objectives.
+
+By the conclusion of the day, Privé members and their leadership teams will possess a sophisticated toolkit for leading difficult commercial conversations with confidence. This masterclass ensures that the learnings reach deep into member organizations, driving consensus-driven execution and securing future success in an uncertain landscape.`
   },
   {
     name: "Jonathan Levav",
     date: "27th September, Sunday",
-    topic: "Understanding consumer's judgments and choices",
+    topic: "Understanding consumer’s judgments and choices by using tools from experimental psychology and behavioural economics.",
     school: "Stanford Business School",
     image: "/professor-profile/jon.jpg",
     schoolLogo: "/professor-school/jon-school.png",
     location: "Mumbai",
-    description: "The challenge today is not a lack of information (or analytics, dashboards, and AI outputs), but the judgment to use it well. What distinguishes leaders who consistently make smart..."
+    description: ""
   },
   {
     name: "Dave Weiner",
@@ -37,7 +45,7 @@ export const professors = [
     image: "/professor-profile/dave.jpg",
     schoolLogo: "/professor-school/dave-school.jpg",
     location: "Mumbai",
-    description: "The challenge today is not a lack of information (or analytics, dashboards, and AI outputs), but the judgment to use it well. What distinguishes leaders who consistently make smart..."
+    description: ""
   },
   {
     name: "Danny Warshay",
@@ -47,6 +55,6 @@ export const professors = [
     image: "/professor-profile/danny.jpg",
     schoolLogo: "/professor-school/danny-school.jpg",
     location: "Mumbai",
-    description: "The challenge today is not a lack of information (or analytics, dashboards, and AI outputs), but the judgment to use it well. What distinguishes leaders who consistently make smart..."
+    description: "See, Solve, Scale"
   }
 ];

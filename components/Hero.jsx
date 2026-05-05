@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="relative h-screen flex flex-col items-center justify-center text-white overflow-hidden">
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{ backgroundImage: "url('/assets/hero.png')" }}
       >
@@ -13,13 +13,9 @@ export default function Hero() {
 
       {/* <Navbar /> */}
 
-      <div className="text-center z-10 px-4 flex items-center justify-center h-full">
+      <div className="z-10 px-8 md:pb-0 pb-[150px] flex items-end md:items-center justify-center h-full w-full max-w-7xl mx-auto">
         <h1 
-          className="font-[family-name:var(--font-inter-display)] font-[800] md:text-[130px] text-[60px] leading-[100%] lowercase"
-          style={{ 
-            letterSpacing: "-4px",
-            textAlign: "center",
-          }}
+          className="font-[family-name:var(--font-inter-display)] font-[800] text-[64px] md:text-[130px] leading-[90%] md:leading-[100%] lowercase tracking-[-3px] md:tracking-[-4px] text-center"
         >
           because of <br />
           uncertainty <br />

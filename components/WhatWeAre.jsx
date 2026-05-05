@@ -3,7 +3,7 @@ export default function WhatWeAre() {
   const paragraphStyle = "font-inter font-medium text-[12px] md:text-[32px] leading-[130%] tracking-[0px] text-[#333333] text-center max-w-[540px] mx-auto";
 
   return (
-    <section id="what-we-are" className="md:pb-[100px] pb-[40px] bg-white flex flex-col items-center md:gap-[100px] gap-[50px] border-b border-[#67686B]">
+    <section id="what-we-are" className=" md:pb-[100px] pb-[40px] bg-white flex flex-col items-center md:gap-[100px] gap-[50px]">
       {/* What we are Section */}
       <div className="w-full max-w-[1280px] px-8 flex flex-col gap-[40px]">
         <h2 className={headingStyle}>What we are</h2>

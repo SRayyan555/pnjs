@@ -3,7 +3,7 @@ export default function Different() {
     <section id="different" className="bg-white py-[50px] md:py-[100px]">
       <div className="flex flex-col items-center">
 
-        <div className="w-full flex flex-col">
+        <div className="w-full flex flex-col ">
           {/* First Principles Row */}
           <div className="flex justify-center">
             <div className="md:px-[40px] w-full  md:mx-[60px] mx-[10px] justify-between  flex border-b border-[#E8BEC1] md:pb-[60px] pb-[20px]  items-center">

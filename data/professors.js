@@ -2,7 +2,7 @@ export const professors = [
   {
     name: "Oded Netzer",
     date: "31st July & 1st August",
-    topic: "DECISIONS OVER DECIMALS: Striking the Balance Between Intuition and Information",
+    topic: "Leadership Intelligence in an AI Era: Developing Quantitative Intuition",
     school: "Columbia Business School",
     image: "/professor-profile/oded.jpg",
     schoolLogo: "/professor-school/oded-school.png",

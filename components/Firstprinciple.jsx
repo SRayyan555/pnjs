@@ -1,14 +1,43 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ProfessorPopup from './ProfessorPopup';
-
 import { professors } from '../data/professors';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Firstprinciple = () => {
   const [selectedProf, setSelectedProf] = useState(null);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    
+    let ctx = gsap.context(() => {
+      // Animate internal elements with a stagger
+      const elements = [".prof-logo", ".prof-name", ".prof-date", ".prof-topic", ".prof-school"];
+      
+      elements.forEach((selector, i) => {
+        gsap.from(selector, {
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none"
+          },
+          y: 40,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.1,
+          delay: i * 0.1,
+          ease: "power3.out"
+        });
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section className="md:py-20 py-[40px] px-4 bg-white font-inter flex flex-col items-center justify-center">
+    <section ref={sectionRef} className="md:py-20 py-[40px] px-4 bg-white font-inter flex flex-col items-center justify-center overflow-hidden">
       <div className="max-w-7xl mx-auto text-center mb-[50px]">
         <h2 className="text-[60px] md:text-[72px] font-serif mb-[30px] tracking-[-0.46px] ">
           <span className="italic font-medium text-[#656a6b] font-kepler text-[32px] md:text-[72px] leading-[110%] tracking-[-0.46px] align-middle">First</span>{" "}
@@ -31,7 +60,6 @@ const Firstprinciple = () => {
         </p>
       </div>
 
-      {/* Modal Popup Component */}
       <ProfessorPopup 
         prof={selectedProf} 
         onClose={() => setSelectedProf(null)} 
@@ -43,13 +71,13 @@ const Firstprinciple = () => {
 const ProfessorCard = ({ prof, onClick }) => {
   return (
     <div 
-      className="flex flex-col bg-white border-[1px] md:border-[1.91px] border-[#E5E5E5] overflow-hidden w-[178px] h-[240px] md:w-[350px] md:h-[470px] cursor-pointer hover:shadow-lg transition-shadow group"
+      className="prof-card flex flex-col bg-white border-[1px] md:border-[1.91px] border-[#E5E5E5] overflow-hidden w-[178px] h-[240px] md:w-[350px] md:h-[470px] cursor-pointer hover:shadow-lg transition-shadow group"
       onClick={onClick}
     >
       {/* Image Area */}
       <div className="relative h-[180px] md:h-[360px] bg-zinc-100 overflow-hidden">
         {/* Logo Overlay */}
-        <div className="absolute top-2 left-2 md:top-4 md:left-4 w-[25px] h-[25px] md:w-[45px] md:h-[45px] z-10 rounded-[4px] flex items-center justify-center">
+        <div className="prof-logo absolute top-2 left-2 md:top-4 md:left-4 w-[25px] h-[25px] md:w-[45px] md:h-[45px] z-10 rounded-[4px] flex items-center justify-center">
           <img
             src={prof.schoolLogo}
             alt={`${prof.school} logo`}
@@ -67,19 +95,19 @@ const ProfessorCard = ({ prof, onClick }) => {
 
         {/* Name and Date Overlay */}
         <div className="absolute bottom-2 left-0 right-0 text-center text-white font-inter px-1">
-          <h3 className="text-[14px] md:text-[24px] leading-[140%] font-semibold tracking-tight font-inter">{prof.name}</h3>
-          <p className="text-[10px] md:text-[16px] leading-[120%] tracking-[-0.4px] font-medium font-inter">{prof.date}</p>
+          <h3 className="prof-name text-[14px] md:text-[24px] leading-[140%] font-semibold tracking-tight font-inter">{prof.name}</h3>
+          <p className="prof-date text-[10px] md:text-[16px] leading-[120%] tracking-[-0.4px] font-medium font-inter">{prof.date}</p>
         </div>
       </div>
 
       {/* Content Area */}
       <div className="p-2 md:p-5 flex flex-col items-center text-center flex-grow">
-        <p className="text-[11px] md:text-[18px] font-medium leading-[1.2] text-[#333333] mb-[5px] md:mb-[10px] font-inter-display tracking-[-0.5px]">
+        <p className="prof-topic text-[11px] md:text-[18px] font-medium leading-[1.2] text-[#333333] mb-[5px] md:mb-[10px] font-inter-display tracking-[-0.5px]">
           {prof.topic}
         </p>
 
         {/* School Info */}
-        <div className="mt-auto flex items-center gap-1 md:gap-3 font-inter">
+        <div className="prof-school mt-auto flex items-center gap-1 md:gap-3 font-inter">
           <img
             src={prof.schoolLogo}
             alt=""

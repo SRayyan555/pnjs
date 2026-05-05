@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FaqPopup from "@/components/FaqPopup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
         <Navbar/>
         {children}
         <Footer/>
+        <FaqPopup/>
       </body>
     </html>
   );

@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 
 const Footer = () => {
@@ -73,8 +74,14 @@ const FooterLink = ({ text }) => {
   const firstLetter = text.charAt(0);
   const restOfText = text.slice(1);
   
+  const handleClick = () => {
+    if (text === "FAQ") {
+      window.dispatchEvent(new Event('openFaqPopup'));
+    }
+  };
+  
   return (
-    <div className="group cursor-pointer">
+    <div className="group cursor-pointer" onClick={handleClick}>
       <div className="flex flex-col items-start">
         <span className="text-[18px] md:text-[24px] font-medium leading-[120%] tracking-tight text-[#333336]">
           <span className="relative">

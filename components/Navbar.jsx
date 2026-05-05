@@ -9,9 +9,13 @@ export default function Navbar() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const navigateTo = (path) => {
+  const navigateTo = (path, label) => {
     setIsOpen(false);
-    router.push(path);
+    if (label === "FAQs") {
+      window.dispatchEvent(new Event('openFaqPopup'));
+    } else {
+      router.push(path);
+    }
   };
 
   const menuOptions = [
@@ -60,7 +64,7 @@ export default function Navbar() {
             {menuOptions.map((option) => (
               <button 
                 key={option.label}
-                onClick={() => navigateTo(option.path)}
+                onClick={() => navigateTo(option.path, option.label)}
                 className="text-white font-[family-name:var(--font-inter-display)] font-[500] text-[28px] leading-[120%] tracking-[-0.04em] text-right hover:opacity-70 transition-opacity"
               >
                 {option.label}

@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Inter, Inter_Tight, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -19,11 +19,7 @@ const inter = Inter({
   weight: ["400", "500", "700", "800"],
 });
 
-const interTight = Inter_Tight({
-  variable: "--font-inter-display",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "800"],
-});
+
 
 const playfair = Playfair_Display({
   variable: "--font-serif",
@@ -41,7 +37,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${interTight.variable} ${playfair.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${playfair.variable} antialiased`}
       >
 
         <Navbar/>

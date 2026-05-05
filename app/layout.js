@@ -1,5 +1,10 @@
 import { Geist, Geist_Mono, Inter, Inter_Tight, Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
+
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { brittany } from "./fonts";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,16 +17,17 @@ const geistMono = Geist_Mono({
 });
 
 const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "800"],
-});
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
 
 const interTight = Inter_Tight({
-  variable: "--font-inter-display",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "800"],
-});
+  subsets: ['latin'],
+  variable: '--font-inter-tight',
+  display: 'swap',
+})
+
 
 const playfair = Playfair_Display({
   variable: "--font-serif",
@@ -39,9 +45,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${interTight.variable} ${playfair.variable} antialiased`}
+        className={`${brittany.variable} ${geistSans.variable} ${geistMono.variable} ${inter.variable} ${interTight.variable} ${playfair.variable} antialiased`}
       >
+        <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

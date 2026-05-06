@@ -25,7 +25,7 @@ export default function Different() {
 
                 <div className="flex items-center md:gap-4 gap-[8px] text-[#A3A3A3]">
                   <img src="/assets/Group.svg" alt="Calendar" className="md:w-[27px] md:h-[27px] w-[16px] h-[16px]" />
-                  <span className="font-display text-[#656A6B] font-medium leading-[120%] tracking-[0px] text-[14px] md:text-[28px]">
+                  <span className="font-inter-display text-[#656A6B] font-medium leading-[120%] tracking-[0px] text-[14px] md:text-[28px]">
                     <span className="text-[14px] md:text-[28px] font-bold">#6</span>/year
                   </span>
                 </div>

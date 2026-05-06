@@ -43,6 +43,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Kepler Std';
+  src: url('/fonts/Kepler%20Std%20Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

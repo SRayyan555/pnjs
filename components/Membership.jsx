@@ -23,9 +23,9 @@ export default function Membership() {
         </div>
 
         {/* Footer info */}
-        <div className="mt-[60px] md:mt-[70px] min-w-[380px]">
+        <div className="mt-[60px] md:mt-[70px] min-w-full">
           <p className="font-inter font-medium text-[11px] md:text-[20px] text-[#333333] leading-[140%]">
-            Most events will be held in Mumbai <span className="hidden md:inline">|</span> The year is 1st April to 31st March
+            Most events will be held in Mumbai <span className="">|</span> The year is 1st April to 31st March
           </p>
         </div>
       </div>

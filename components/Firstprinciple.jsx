@@ -113,7 +113,7 @@ const ProfessorCard = ({ prof, onClick }) => {
             alt=""
             className="w-[15px] h-[15px] md:w-[30px] md:h-[30px] rounded-[2px] md:rounded-[4px] object-contain"
           />
-          <span className="text-[11px] md:text-[19px] leading-[140%] font-regular text-black font-inter">{prof.school}</span>
+          <span className="text-[11px] md:text-[19px] leading-[140%] tracking-0 tracking-[-0.5px] font-regular text-black font-inter">{prof.school}</span>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { brittany } from "./fonts";
-import FaqPopup from "@/components/FaqPopup";
+import FaqPopup from "@/components/FaqPopup"; 
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

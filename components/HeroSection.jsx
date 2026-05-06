@@ -17,7 +17,7 @@ export default function HeroSection() {
   const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.2, 0.3]);
 
   return (
-    <section ref={ref} className="relative h-screen overflow-hidden">
+    <section ref={ref} className="relative aspect-square md:h-screen overflow-hidden">
 
       {/* IMAGE */}
       <motion.div
@@ -34,12 +34,12 @@ export default function HeroSection() {
       {/* DARK OVERLAY (fix) */}
       <motion.div
         style={{ opacity: overlayOpacity }}
-        className="absolute inset-0 bg-black"
+        className="absolute inset-0 bg-black/90"
       />
 
       {/* TEXT */}
       <div className="relative z-10 flex items-center justify-center h-full">
-        <h1 className="text-white text-[80px] md:text-[120px] font-serif font-semibold tracking-tight">
+        <h1 className="text-white text-[55px] text-center md:text-left md:text-[120px] font-serif font-semibold tracking-tight">
           Professionals Network
         </h1>
       </div>

@@ -1,6 +1,6 @@
 export default function ContactHero() {
   return (
-    <section className="bg-red-500 h-screen sticky top-0 text-white overflow-hidden">
+    <section className="bg-red-500 flex items-center md:block h-screen sticky top-0 text-white overflow-hidden">
       {/* BACKGROUND CIRCLES */}
       <div className="absolute inset-0">
         <div className="absolute w-[600px] h-[600px] bg-red-400 rounded-full top-[-100px] left-[-100px] opacity-60" />
@@ -19,7 +19,7 @@ export default function ContactHero() {
         </h1>
 
         {/* SUBTEXT */}
-        <p className="my-6 text-base sm:text-[21px] font-medium font-inter tracking-[-1.5px] text-white/90 max-w-[400px]">
+        <p className="my-6 text-[19px] sm:text-[21px] font-medium font-inter tracking-[-1.5px] text-white/90 max-w-[400px]">
           — If you&apos;re interested in any form of collaboration, please send
           us an email and we&apos;ll get back shortly.
         </p>
@@ -28,7 +28,7 @@ export default function ContactHero() {
 
         <a
           href="#"
-          className="group relative font-medium text-[48px]  font-inter tracking-[-1.2px] text-[#fff] hover:text-[#fff] transition"
+          className="group relative font-medium text-2xl md:text-[48px]  font-inter tracking-[-1.2px] text-[#fff] hover:text-[#fff] transition"
         >
           Contact us
           <span className="absolute left-0 -bottom-1 h-[2px] bg-[#fff] w-4 transition-all duration-300 group-hover:w-full" />

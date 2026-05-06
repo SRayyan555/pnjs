@@ -16,7 +16,7 @@ export default function ValuesTextSection() {
   
     return (
       <section className="bg-white text-black">
-        <div className=" mx-auto px-10 py-24 lg:pb-32">
+        <div className=" mx-auto px-6 md:px-10 pb-24 lg:pb-32">
   
           {/* GRID */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
@@ -25,10 +25,10 @@ export default function ValuesTextSection() {
             <div className="space-y-16">
   
               {items.map((item, i) => (
-                <div key={i} className="flex gap-6">
+                <div key={i} className="flex gap-4 md:gap-6">
   
                   {/* NUMBER */}
-                  <span className="text-[#C0C0C0] tracking-[-1.3px] text-3xl font-medium min-w-[60px]">
+                  <span className="text-[#C0C0C0] font-inter tracking-[-1.3px] text-2xl md:text-3xl font-medium  min-w-[40px] md:min-w-[60px]">
                     {item.id}/
                   </span>
   
@@ -43,7 +43,7 @@ export default function ValuesTextSection() {
             </div>
   
             {/* RIGHT SIDE */}
-            <div className="flex flex-col ">
+            <div className="flex flex-col mt-20">
   
               {/* MAIN TEXT */}
               <h3 className="text-2xl sm:text-[28px] font-medium tracking-[-1px] leading-tight text-[#333336] ">
@@ -51,7 +51,7 @@ export default function ValuesTextSection() {
               </h3>
   
               {/* SUBTEXT */}
-              <p className="mt-6 text-[21px] text-[#8A8A91] tracking-[-1px] leading-relaxed w-[90%]">
+              <p className="mt-6 text-[19px] md:text-[21px] font-inter font-medium text-[#8A8A91] tracking-[-1px] leading-normal md:w-[90%]">
                 We believe in independent thinkers who come together to execute a shared vision. Autonomy fuels creativity; alignment drives impact.
               </p>
   

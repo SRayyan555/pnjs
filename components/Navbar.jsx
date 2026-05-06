@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,8 +30,7 @@ export default function Navbar() {
     <>
       <nav className="flex justify-between items-start p-8 w-full absolute top-0 left-0 z-40">
         <div className="flex flex-col leading-tight cursor-pointer" onClick={() => navigateTo("/")}>
-          <span className="text-4xl font-black text-red-600 tracking-tighter">CSuite</span>
-          <span className="text-4xl font-black text-zinc-500 tracking-tighter -mt-2">Network</span>
+          <Image src="/assets/logo.svg" alt="Professional Network" width={170} height={13} />
         </div>
         <button 
           onClick={toggleMenu}

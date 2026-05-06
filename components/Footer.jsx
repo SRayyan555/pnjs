@@ -1,16 +1,17 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-zinc-100 font-inter">
-      <div className="max-w-7xl mx-auto px-6 md:py-12 pt-[20px] md:pt-0 md:py-20 text-[#333336]">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-          
+    <footer className="bg-white border-t flex items-center justify-center flex-col border-zinc-100 font-inter">
+      <div className="w-full px-6 md:pt-0 pt-[20px] text-[#333336]">
+        <div className="grid grid-cols-1 md:grid-cols-12 md:gap-12">
+
           {/* Links Section - 2 Columns on Mobile */}
-          <div className="md:col-span-7 grid grid-cols-2 gap-8 md:pl-[115px]">
+          <div className="md:col-span-7 grid grid-cols-2 md:w-[600px] md:h-[312px] md:gap-[150px] md:border-t md:pt-[32px] md:pl-[40px]">
             {/* Left Navigation */}
-            <div className="space-y-4">
+            <div className="md:space-y-4 space-y-[16px]">
               <FooterLink text="Home" />
               <FooterLink text="About" />
               <FooterLink text="Apply" />
@@ -18,7 +19,7 @@ const Footer = () => {
             </div>
 
             {/* Middle Navigation */}
-            <div className="space-y-4">
+            <div className="md:space-y-4 space-y-[16px]">
               <FooterLink text="Privacy Policy" />
               <FooterLink text="Terms of Service" />
               <FooterLink text="Disclaimer" />
@@ -26,7 +27,7 @@ const Footer = () => {
           </div>
 
           {/* Right Social Links */}
-          <div className="md:col-span-5 flex flex-col w-full md:w-[280px] md:ml-auto md:mr-[76px]">
+          <div className="md:col-span-5 flex flex-col w-full md:w-[279px] md:h-[312px] md:ml-auto md:mr-[76px] md:border-t">
             <SocialLink text="X" />
             <SocialLink text="Linkedin" />
             <SocialLink text="Instagram" />
@@ -49,13 +50,9 @@ const Footer = () => {
 
           {/* Trademark Info */}
           <div className="mt-10 md:mt-0 p-0 md:p-10 py-2 md:border-r border-[#E6E6E6] flex flex-col justify-center font-inter-display">
-            <div className="mb-2 text-[17px]">
-              <span className="font-bold text-[#c01823]">Privé</span>{" "}
-              <span className="font-bold text-black">Network</span>
-              <span className="text-[#8a8a91]"> is one amongst many networks</span>
-            </div>
             <p className="text-[17px] tracking-[-1px] leading-[120%] text-[#8a8a91]">
-              trademarked and operated by <span className="underline text-[#67686B] font-medium cursor-pointer">Rextone Digital</span> Pvt. Ltd.
+              <Image src="/assets/logo.svg" alt="Professional Network" width={170} height={13} className="inline-block align-baseline mr-1" />
+              is one amongst many networks trademarked and operated by <span className="underline text-[#67686B] font-medium cursor-pointer">Rextone Digital</span> Pvt. Ltd.
             </p>
           </div>
 
@@ -73,20 +70,20 @@ const Footer = () => {
 const FooterLink = ({ text }) => {
   const firstLetter = text.charAt(0);
   const restOfText = text.slice(1);
-  
+
   const handleClick = () => {
     if (text === "FAQ") {
       window.dispatchEvent(new Event('openFaqPopup'));
     }
   };
-  
+
   return (
-    <div className="group cursor-pointer" onClick={handleClick}>
-      <div className="flex flex-col items-start">
-        <span className="text-[18px] md:text-[24px] font-medium leading-[120%] tracking-tight text-[#333336]">
-          <span className="relative">
+    <div className="group cursor-pointer w-full" onClick={handleClick}>
+      <div className="flex flex-col items-start w-full">
+        <span className="font-inter-display font-medium md:text-[28px] text-[19px] leading-[120%] tracking-[-1.3px] align-middle text-[#333336] group-hover:text-[#c01823] transition-colors">
+          <span className="relative inline-block">
             {firstLetter}
-            <span className="absolute -bottom-1 left-0 w-full h-[1.5px] bg-[#c01823]"></span>
+            <span className="absolute -bottom-1 left-0 w-[14px] h-[1.5px] bg-[#c01823] group-hover:w-full transition-all duration-300 ease-out"></span>
           </span>
           {restOfText}
         </span>
@@ -96,11 +93,11 @@ const FooterLink = ({ text }) => {
 };
 
 const SocialLink = ({ text }) => (
-  <div className="flex items-center justify-between py-8 md:py-4 border-t border-[#E6E6E6] last:border-b cursor-pointer group hover:bg-zinc-50 transition-colors">
-    <span className="text-[24px] md:text-[28px] font-medium leading-[120%] tracking-tight text-[#333336]">{text}</span>
-    <span className="text-[#c01823]">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  <div className="flex items-center justify-between md:py-8 py-6 md:w-[279px] md:h-[78px] md:p-[24px] border-b border-[#E6E6E6] cursor-pointer group hover:bg-[#c01823] transition-colors font-inter-display">
+    <span className="text-[24px] md:text-[28px] font-medium leading-[120%] md:tracking-[-1.3px] text-[#333336] group-hover:text-white align-middle transition-colors">{text}</span>
+    <span className="text-[#c01823] group-hover:text-white transition-colors">
+      <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 20V16H4V20H0ZM4 16V12H8V16H4ZM8 12V8H12V12H8ZM4 8V4H8V8H4ZM0 4V0H4V4H0Z" fill="currentColor" />
       </svg>
     </span>
   </div>

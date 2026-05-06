@@ -19,7 +19,7 @@ export default function Hero() {
 
       <div className="z-10 px-8 md:pb-0 pb-[150px] flex items-end md:items-center justify-center h-full w-full max-w-7xl mx-auto">
         <h1 
-          className="font-[family-name:var(--font-inter-display)] font-[800] text-[64px] md:text-[130px] leading-[90%] md:leading-[100%] lowercase tracking-[-3px] md:tracking-[-4px] text-center"
+          className="font-inter-display font-[800] text-[64px] md:text-[130px] leading-[90%] md:leading-[100%] lowercase tracking-[-3px] md:tracking-[-4px] text-center"
         >
           because of <br />
           uncertainty <br />

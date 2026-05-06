@@ -7,9 +7,9 @@ export default function ValuesSection() {
 
   return (
     <section className="bg-white text-black">
-      <div className=" mx-auto px-10 py-20 lg:py-28">
+      <div className=" mx-auto px-6 md:px-10 py-20 lg:py-28">
         {/* HEADING */}
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-[-0.02em] leading-[1.1] mb-16">
+        <h2 className="text-[32px] font-inter sm:text-5xl lg:text-6xl font-medium tracking-[-0.02em] leading-[1.1] mb-16">
           What makes us, us
         </h2>
 
@@ -18,7 +18,7 @@ export default function ValuesSection() {
           {values.map((item, i) => (
             <div key={i} className="group">
               {/* TITLE */}
-              <h3 className="text-[34px] tracking-[-1.5px] font-inter font-medium mb-8 relative z-100 text-gray-700">
+              <h3 className="text-[32px] tracking-[-1.5px] font-inter font-medium  mb-6 relative z-100 text-gray-700">
                 {item.title}
               </h3>
 

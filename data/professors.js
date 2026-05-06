@@ -6,6 +6,8 @@ export const professors = [
     school: "Columbia Business School",
     image: "/professor-profile/oded.jpg",
     schoolLogo: "/professor-school/oded-school.png",
+    linkedinLink: "https://www.linkedin.com/in/oded-netzer-700255",
+    schoolLink: "https://business.columbia.edu/faculty/people/oded-netzer",
     location: "Mumbai",
     description: "The challenge today is not a lack of information (or analytics, dashboards, and AI outputs), but the judgment to use it well. What distinguishes leaders who consistently make smart decisions is their ability to quickly sort through signal and noise by asking essential questions, pressure-testing assumptions, and validating claims, not with statistical rigor, but from a business validity perspective. This form of leadership intelligence has become all the more important in the AI era. This session equips leaders to engage with AI productively. It teaches Quantitative Intuition (QI), a practical framework and set of rapid-response tools for making better decisions in a data-driven world where AI is accelerating answers but not necessarily improving judgment. Participants will learn to frame issues with precision before rushing to solutions, develop intuition for numbers using pragmatic methods and apply contextual lenses to assess relevance, risk, and trust when information is incomplete."
   },
@@ -16,6 +18,8 @@ export const professors = [
     school: "London Business School",
     image: "/professor-profile/niro.png",
     schoolLogo: "/professor-school/niro-school.png",
+    linkedinLink: "https://www.linkedin.com/in/nirosivanathan",
+    schoolLink: "https://www.london.edu/faculty-and-research/faculty-profiles/s/sivanathan-n",
     location: "Mumbai",
     description: `In an era defined by rapid technological shifts and complex market dynamics, the ability to secure favorable terms, influence key stakeholders, and architect robust deals is paramount. Privé is designed for the ambitious and the restless—those seeking to protect their legacy while remaining future-ready. Aligning with Privé’s mission to solve high-stakes problems through "First Principles" peer learning, this intensive 1-day masterclass distills the science of negotiation and influence into actionable strategies for ultra-high-net-worth individuals, family board members, and top-tier professionals. The curriculum is structured around two core pillars: the cognitive psychology of influence and the strategic architecture of deal-making.
     THE COGNITIVE PSYCHOLOGY OF INFLUENCE
@@ -33,6 +37,8 @@ By the conclusion of the day, Privé members and their leadership teams will pos
     school: "Stanford Business School",
     image: "/professor-profile/jon.jpg",
     schoolLogo: "/professor-school/jon-school.png",
+    linkedinLink: "https://www.linkedin.com/in/jonathan-levav-0333329",
+    schoolLink: "https://www.gsb.stanford.edu/faculty-research/faculty/jonathan-levav",
     location: "Mumbai",
     description: ""
   },
@@ -43,6 +49,8 @@ By the conclusion of the day, Privé members and their leadership teams will pos
     school: "University California Berkeley",
     image: "/professor-profile/dave.jpg",
     schoolLogo: "/professor-school/dave-school.jpg",
+    linkedinLink: "https://www.linkedin.com/in/daveweiner2",
+    schoolLink: "https://www.berkeley.edu/",
     location: "Mumbai",
     description: ""
   },
@@ -53,6 +61,8 @@ By the conclusion of the day, Privé members and their leadership teams will pos
     school: "Brown University",
     image: "/professor-profile/danny.jpg",
     schoolLogo: "/professor-school/danny-school.jpg",
+    linkedinLink: "https://www.linkedin.com/in/dannywarshay",
+    schoolLink: "https://dannywarshay.com/",
     location: "Mumbai",
     description: "See, Solve, Scale"
   }

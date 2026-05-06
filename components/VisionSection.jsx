@@ -1,6 +1,6 @@
 export default function VisionSection() {
     return (
-      <section className="bg-[#e10600] flex items-center justify-center h-screen text-white sticky top-0 -z-10">
+      <section className="bg-[#E40000] flex items-center justify-center h-screen text-white sticky top-0 -z-10">
         <div className=" mx-auto px-10 py-20 lg:py-28">
   
           {/* Content Wrapper */}

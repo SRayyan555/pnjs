@@ -22,7 +22,7 @@ export default function VisionSection() {
             <div className="mt-16 lg:mt-24">
               
               {/* Signature (script style) */}
-              <p className="text-2xl sm:text-3xl font-brittany signature">
+              <p className="text-2xl sm:text-3xl signature">
                 Saurabh Goswamy
               </p>
   

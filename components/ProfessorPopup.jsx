@@ -1,9 +1,12 @@
 "use client";
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const ProfessorPopup = ({ prof, onClose }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   useEffect(() => {
     if (prof) {
+      setIsExpanded(false);
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -17,13 +20,13 @@ const ProfessorPopup = ({ prof, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-      <div 
+      <div
         className="absolute inset-0 bg-black/40 backdrop-blur-sm"
         onClick={onClose}
       />
       <div className="relative bg-white w-full max-w-[800px] h-auto md:h-auto rounded-[30px] p-[30px] flex flex-col md:flex-row gap-8 shadow-2xl overflow-hidden">
         {/* Close Button */}
-        <button 
+        <button
           onClick={onClose}
           className="absolute top-6 right-6 w-8 h-8 bg-[#EEEEEE] rounded-full flex items-center justify-center group hover:bg-[#E0E0E0] transition-colors z-10"
         >
@@ -35,15 +38,15 @@ const ProfessorPopup = ({ prof, onClose }) => {
 
         {/* Left Side: Image */}
         <div className="w-full md:w-[320px] h-[320px] md:h-[400px] flex-shrink-0">
-          <img 
-            src={prof.image} 
+          <img
+            src={prof.image}
             alt={prof.name}
             className="w-full h-full object-cover rounded-[30px]"
           />
         </div>
 
         {/* Right Side: Content */}
-        <div className="flex flex-col flex-grow py-1 font-inter">
+        <div className="flex flex-col flex-grow py-1 font-inter max-h-[320px] md:max-h-[400px] overflow-y-auto overflow-x-hidden pr-2">
           {/* Header Info */}
           <div className="mb-4">
             <h2 className="text-[32px] md:text-[36px] font-semibold text-black leading-tight mb-2">
@@ -56,11 +59,11 @@ const ProfessorPopup = ({ prof, onClose }) => {
               <span>{prof.school}</span>
               <img src={prof.schoolLogo} alt="" className="w-5 h-5 object-contain ml-1" />
             </div>
-            
+
             {/* Social Icons */}
             <div className="flex items-center gap-3 mt-3">
               <div className="w-7 h-7 bg-[#0077B5] rounded-[4px] flex items-center justify-center cursor-pointer hover:bg-[#006396] transition-colors">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
               </div>
             </div>
           </div>
@@ -71,29 +74,36 @@ const ProfessorPopup = ({ prof, onClose }) => {
             <p className="text-[16px] font-semibold text-[#333333] mb-1.5 leading-[135%]">
               {prof.topic}
             </p>
-            <p className="text-[14px] text-[#656A6B] leading-[150%]">
-              {prof.description}
-              <span className="text-[#c01823] font-semibold cursor-pointer ml-1 hover:underline">View More</span>
-            </p>
+            <div className="text-[14px] text-[#656A6B] leading-[150%]">
+              <p className={isExpanded ? '' : 'line-clamp-3'}>
+                {prof.description}
+              </p>
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="text-[#c01823] font-semibold cursor-pointer hover:underline mt-1"
+              >
+                {isExpanded ? 'View Less' : 'View More'}
+              </button>
+            </div>
           </div>
 
           {/* Location & Date Footer */}
           <div className="mt-auto pt-4 border-t border-zinc-100 flex flex-col gap-2.5">
             <div className="flex items-center gap-2.5 text-[#333333] font-semibold text-[14px]">
-               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-zinc-400">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-               </svg>
-               <span>{prof.location}</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-zinc-400">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>{prof.location}</span>
             </div>
             <div className="flex items-center gap-2.5 text-[#333333] font-semibold text-[14px]">
-               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-zinc-400">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="16" y1="2" x2="16" y2="6"></line>
-                  <line x1="8" y1="2" x2="8" y2="6"></line>
-                  <line x1="3" y1="10" x2="21" y2="10"></line>
-               </svg>
-               <span>{prof.date}</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-zinc-400">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>{prof.date}</span>
             </div>
           </div>
         </div>

@@ -18,8 +18,7 @@ export const professors = [
     schoolLogo: "/professor-school/niro-school.png",
     location: "Mumbai",
     description: `In an era defined by rapid technological shifts and complex market dynamics, the ability to secure favorable terms, influence key stakeholders, and architect robust deals is paramount. Privé is designed for the ambitious and the restless—those seeking to protect their legacy while remaining future-ready. Aligning with Privé’s mission to solve high-stakes problems through "First Principles" peer learning, this intensive 1-day masterclass distills the science of negotiation and influence into actionable strategies for ultra-high-net-worth individuals, family board members, and top-tier professionals. The curriculum is structured around two core pillars: the cognitive psychology of influence and the strategic architecture of deal-making.
-
-THE COGNITIVE PSYCHOLOGY OF INFLUENCE
+    THE COGNITIVE PSYCHOLOGY OF INFLUENCE
 The morning sessions focus on the psychological mechanisms that drive decision-making at the bargaining table and in the boardroom. Members will explore how the framing and presentation of information can be leveraged to nudge counterparts toward desired outcomes. For family business owners navigating succession, or startup founders pitching to institutional investors, mastering these tools ensures that proposals are structured to maximize acceptance and reduce friction. The focus is on acting as an agenda-setter rather than a reactive participant.
 
 STRATEGIC DEAL ARCHITECTURE AND VALUE CREATION

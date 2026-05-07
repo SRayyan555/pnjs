@@ -30,7 +30,7 @@ export default function Navbar() {
     <>
       <nav className="flex justify-between items-start p-8 w-full absolute top-0 left-0 z-40">
         <div className="flex flex-col leading-tight cursor-pointer" onClick={() => navigateTo("/")}>
-          <Image src="/assets/logo.svg" alt="Professional Network" width={170} height={13} />
+          <Image src="/nav-logo.svg" alt="Professional Network" width={223} height={60} className="h-8 w-auto md:h-10" />
         </div>
         <button 
           onClick={toggleMenu}

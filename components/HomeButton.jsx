@@ -25,7 +25,7 @@ export default function HomeButton() {
       behavior: "smooth"
     });
   };
-
+ 
   if (!isVisible) return null;
 
   return (

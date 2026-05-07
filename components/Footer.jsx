@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 md:gap-12">
 
           {/* Links Section - 2 Columns on Mobile */}
-          <div className="md:col-span-7 grid grid-cols-2 md:w-[600px] md:h-[312px] md:gap-[150px] md:border-t md:pt-[32px] md:pl-[40px]">
+          <div className="md:col-span-7 grid grid-cols-2 md:w-[600px] md:h-[312px] md:gap-[150px] md:pt-[32px] md:pl-[40px]">
             {/* Left Navigation */}
             <div className="md:space-y-4 space-y-[16px]">
               <FooterLink text="Home" />
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           {/* Right Social Links */}
-          <div className="md:col-span-5 flex flex-col w-full md:w-[279px] md:h-[312px] md:ml-auto md:mr-[76px] md:border-t">
+          <div className="md:col-span-5 flex flex-col w-full md:w-[279px] md:h-[312px] md:ml-auto md:mr-[76px] ">
             <SocialLink text="X" />
             <SocialLink text="Linkedin" />
             <SocialLink text="Instagram" />

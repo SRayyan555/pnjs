@@ -1,9 +1,9 @@
 export default function WhatWeAre() {
   const headingStyle = "font-inter-display font-semibold md:text-[72px] text-[25px] leading-[120%] md:tracking-[-2.6px] tracking-[-1px] text-[#333333] text-center";
-  const paragraphStyle = "font-inter font-medium text-[12px] md:text-[32px] leading-[130%] tracking-[0px] text-[#333333] text-center max-w-[540px] mx-auto";
+  const paragraphStyle = "font-inter font-medium text-[12px] lg:text-[32px] md:text-[24px] leading-[130%] tracking-[0px] text-[#333333] text-center max-w-[540px] mx-auto";
 
   return (
-    <section id="what-we-are" className=" md:pb-25 pb-10 bg-white flex flex-col items-center md:gap-[100px] gap-[50px] ">
+    <section id="what-we-are" className=" md:pb-25 pb-10 bg-white flex flex-col items-center lg:gap-[100px] md:gap-[70px] gap-[50px] ">
       {/* What we are Section */}
       <div className="w-full max-w-7xl px-8 flex flex-col gap-10">
         <h2 className={headingStyle}>What we are</h2>
@@ -26,19 +26,19 @@ export default function WhatWeAre() {
       </div>
 
       {/* What we are not Section */}
-      <div className="w-full max-w-[1280px] px-8 flex flex-col md:gap-10 gap-[20px]">
+      <div className="w-full max-w-[1280px] px-8 flex flex-col md:gap-10 gap-[20px] ">
         <h2 className={headingStyle}>
           What we are <span className="text-[#E31E24]">not</span>
         </h2>
 
-        <div className="flex justify-between items-center md:px-[40px]">
+        <div className="flex justify-between items-center md:px-[40px] ">
           <div className=" ">
-            <h3 className=" font-inter-display font-semibold md:text-[40px] text-[16px] leading-[120%] md:tracking-[-1.5px] tracking-[0px] text-[#333333] text-left max-w-[400px]">
+            <h3 className=" font-inter-display font-semibold lg:text-[40px] md:text-[28px] text-[16px] leading-[120%] md:tracking-[-1.5px] tracking-[0px] text-[#333333] text-left max-w-[400px]">
               Not executive education
             </h3>
           </div>
           <div className="flex md:pl-20">
-            <p className="font-sans md:w-[650px] w-[220px]  font-medium md:text-[32px] text-[12px] leading-[120%] tracking-[0px] text-[#333333] ">
+            <p className="font-inter md:w-[100%] lg:w-[650px] w-[220px]  font-medium lg:text-[32px] md:text-[24px] text-[12px] leading-[120%] tracking-[0px] text-[#333333] ">
               Anyone can organise executive education, its the peer group that matters.
             </p>
           </div>

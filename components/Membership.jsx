@@ -8,16 +8,16 @@ export default function Membership() {
         </span>
 
         {/* Main Heading */}
-        <h2 className="font-inter-display font-semibold text-[25px] md:text-[72px] leading-[110%] md:leading-[100%] tracking-[-1.5px] md:tracking-[-2.6px] text-[#333333] max-w-[1100px] mx-auto mb-[40px] md:mb-[70px]">
+        <h2 className="font-inter-display font-semibold text-[25px] lg:text-[72px] md:text-[60px] leading-[110%] md:leading-[100%] tracking-[-1.5px] md:tracking-[-2.6px] text-[#333333] max-w-[1100px] mx-auto mb-[40px] md:mb-[70px]">
           A network of those professionals,<br className="hidden md:block" /> restless & eager to learn
         </h2>
 
         {/* Price and Note */} 
         <div className="flex flex-col gap-3 md:gap-6">
-          <h3 className="font-inter-display font-medium text-[28px] md:text-[50px] leading-[100%] tracking-[-1px] md:tracking-[-2.6px] text-[#333333]">
+          <h3 className="font-inter-display font-medium text-[28px] lg:text-[50px] md:text-[40px] leading-[100%] tracking-[-1px] md:tracking-[-2.6px] text-[#333333]">
             INR 2 lakhs + tax
           </h3>
-          <p className="font-inter-display font-medium text-[16px] md:text-[28px] leading-[120%] md:leading-[100%] text-[#666666] max-w-[300px] md:max-w-[850px] mx-auto">
+          <p className="font-inter-display font-medium text-[16px] lg:text-[28px] md:text-[20px] leading-[120%] md:leading-[100%] text-[#666666] max-w-[300px] md:max-w-[850px] mx-auto">
             Invoice can be issued to enterprise or individual, as preferred
           </p>
         </div>

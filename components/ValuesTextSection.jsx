@@ -43,7 +43,7 @@ export default function ValuesTextSection() {
             </div>
   
             {/* RIGHT SIDE */}
-            <div className="flex flex-col mt-20">
+            <div className="flex flex-col mt-20 md:mt-0">
   
               {/* MAIN TEXT */}
               <h3 className="text-2xl sm:text-[28px] font-medium tracking-[-1px] leading-tight text-[#333336] ">

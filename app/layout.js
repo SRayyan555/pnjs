@@ -38,8 +38,35 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://theprofessional.network"),
+
   title: "Professional Network",
-  description: "",
+  description: "A network of ambitious professionals",
+
+  openGraph: {
+    title: "Professional Network",
+    description: "A network of ambitious professionals",
+    url: "https://theprofessional.network",
+    siteName: "Professional Network",
+
+    images: [
+      {
+        url: "/og.webp",
+        width: 1200,
+        height: 630,
+        alt: "Professional Network",
+      },
+    ],
+
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Professional Network",
+    description: "A network of ambitious professionals",
+    images: ["/og.webp"],
+  },
 };
 
 import HomeButton from "@/components/HomeButton";

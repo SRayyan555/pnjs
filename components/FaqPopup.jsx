@@ -1,8 +1,17 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import faqs from '@/data/faqdetails';
+import { HiOutlineMenuAlt4 } from "react-icons/hi";
+import { RxCross2 } from "react-icons/rx";
 
 const FaqPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [expandedIndex, setExpandedIndex] = useState(null);
+  const answerRefs = useRef([]);
+
+  const toggleExpand = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
 
   useEffect(() => {
     const handleOpen = () => setIsOpen(true);
@@ -15,6 +24,7 @@ const FaqPopup = () => {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
+      setExpandedIndex(null);
     }
     return () => {
       document.body.style.overflow = 'unset';
@@ -32,7 +42,7 @@ const FaqPopup = () => {
       />
       
       {/* Popup Content */}
-      <div className="relative bg-white w-[1200px] h-[90vh] rounded-[30px] p-10 flex flex-col shadow-2xl overflow-hidden z-10">
+      <div className="relative bg-white w-[1150px] h-[90vh] rounded-[30px] p-10 flex flex-col shadow-2xl overflow-hidden z-10">
         {/* Close Button */}
         <button 
           onClick={() => setIsOpen(false)}
@@ -44,18 +54,63 @@ const FaqPopup = () => {
           </svg>
         </button>
 
-        <h2 className="text-4xl font-black text-black uppercase italic mb-8">FAQs</h2>
+        <h2 className="font-inter-display text-[35px] font-medium text-[#8a8a91] text-center mb-10" style={{ letterSpacing: '-1.4px' }}>FAQ</h2>
         
-        <div className="flex-grow overflow-y-auto pr-4">
-          <div className="space-y-12">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">What is CSuite Network?</h3>
-              <p className="text-zinc-600">A network for ambitious professionals coming together to learn and solve complex problems.</p>
+        <div className="flex-grow overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="border-t border-b border-[#E8E8E8] -mb-px cursor-pointer"
+            >
+              {/* Question Row */}
+              <div
+                className="flex items-center justify-between min-h-[100px] font-inter-display text-[28px] text-[#333336] font-medium px-[20px]"
+                style={{ letterSpacing: '-0.5px' }}
+                onClick={() => toggleExpand(index)}
+              >
+                <span>{faq.question}</span>
+                {expandedIndex === index ? (
+                  <RxCross2
+                    color="#c01823"
+                    style={{ width: '50px', height: '50px', flexShrink: 0, transition: 'transform 0.3s ease' }}
+                  />
+                ) : (
+                  <HiOutlineMenuAlt4 
+                    color="#c01823"
+                    style={{ width: '60px', height: '50px', flexShrink: 0, transition: 'transform 0.3s ease' }}
+                  />
+                )}
+              </div>
+
+              {/* Answer with smooth expand */}
+              <div
+                style={{
+                  maxHeight: expandedIndex === index ? `${answerRefs.current[index]?.scrollHeight || 0}px` : '0px',
+                  transition: 'max-height 0.4s ease, opacity 0.3s ease',
+                  opacity: expandedIndex === index ? 1 : 0,
+                  overflow: 'hidden',
+                }}
+              >
+                <div
+                  ref={(el) => (answerRefs.current[index] = el)}
+                  className="font-inter-display text-[28px] text-[#8a8a91] font-medium px-[20px] pb-[30px]"
+                  style={{ letterSpacing: '-1.3px', lineHeight: '120%' }}
+                >
+                  {faq.answer}
+                </div>
+              </div>
             </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-4">How do I join?</h3>
-              <p className="text-zinc-600">You can apply for membership through our membership section on the home page.</p>
-            </div>
+          ))}
+
+          {/* Bottom CTA */}
+          <div className="flex items-center justify-center gap-6 pt-[60px] pb-[30px]">
+            <span className="font-serif italic text-[32px] text-[#8a8a91]" style={{ letterSpacing: '-0.03rem' }}>
+              Anything we left out?
+            </span>
+            <div className="w-px h-[50px] bg-[#D0D0D0]"></div>
+            <a href="/contact" className="font-inter-display text-[22px] text-[#333336] underline underline-offset-4 hover:opacity-70 transition-opacity font-medium">
+              contact us
+            </a>
           </div>
         </div>
       </div>

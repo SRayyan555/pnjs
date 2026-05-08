@@ -29,9 +29,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex justify-between items-start p-8 w-full absolute top-0 left-0 z-40">
+      <nav className="flex justify-between items-start p-4 md:p-8 w-full absolute top-0 left-0 z-40">
         <div className="flex flex-col leading-tight cursor-pointer" onClick={() => navigateTo("/")}>
-          <Image src={logo} alt="professional network"/>
+          <Image src={logo} alt="professional network" className="w-40 md:w-auto"/>
         </div>
         <button 
           onClick={toggleMenu}

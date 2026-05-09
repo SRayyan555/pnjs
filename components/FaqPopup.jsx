@@ -60,11 +60,11 @@ const FaqPopup = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border-t border-b border-[#E8E8E8] -mb-px cursor-pointer"
+              className="border-t border-b border-[#E8E8E8]  -mb-px cursor-pointer"
             >
               {/* Question Row */}
               <div
-                className="flex items-center justify-between min-h-[100px] font-inter-display text-[28px] text-[#333336] font-medium px-[20px]"
+                className="flex items-center justify-between min-h-[100px] font-inter-display md:text-[28px] text-[18px] text-[#333336] font-medium md:px-[20px] gap-[10px] md:gap-0"
                 style={{ letterSpacing: '-0.5px' }}
                 onClick={() => toggleExpand(index)}
               >
@@ -72,12 +72,14 @@ const FaqPopup = () => {
                 {expandedIndex === index ? (
                   <RxCross2
                     color="#c01823"
-                    style={{ width: '50px', height: '50px', flexShrink: 0, transition: 'transform 0.3s ease' }}
+                    style={{flexShrink: 0, transition: 'transform 0.3s ease' }}
+                    className="md:w-[50px] md:h-[50px] w-[30px] h-[30px]"
                   />
                 ) : (
                   <HiOutlineMenuAlt4 
                     color="#c01823"
-                    style={{ width: '60px', height: '50px', flexShrink: 0, transition: 'transform 0.3s ease' }}
+                    style={{ flexShrink: 0, transition: 'transform 0.3s ease' }}
+                    className="md:w-[60px] md:h-[50px] w-[30px] h-[30px]"
                   />
                 )}
               </div>
@@ -93,7 +95,7 @@ const FaqPopup = () => {
               >
                 <div
                   ref={(el) => (answerRefs.current[index] = el)}
-                  className="font-inter-display text-[28px] text-[#8a8a91] font-medium px-[20px] pb-[30px]"
+                  className="font-inter-display md:text-[28px] text-[18px] text-[#8a8a91] font-medium md:px-[20px] pb-[30px]"
                   style={{ letterSpacing: '-1.3px', lineHeight: '120%' }}
                 >
                   {faq.answer}
@@ -103,11 +105,12 @@ const FaqPopup = () => {
           ))}
 
           {/* Bottom CTA */}
-          <div className="flex items-center justify-center gap-6 pt-[60px] pb-[30px]">
+          <div className="flex md:flex-row flex-col items-center justify-center gap-6 pt-[60px] pb-[30px]">
             <span className="font-serif italic text-[32px] text-[#8a8a91]" style={{ letterSpacing: '-0.03rem' }}>
               Anything we left out?
             </span>
-            <div className="w-px h-[50px] bg-[#D0D0D0]"></div>
+            <div className="w-px h-[50px] bg-[#D0D0D0] hidden md:block"></div>
+            <div className="w-[250px] h-[1px] bg-[#D0D0D0] md:hidden"></div>
             <a href="/contact" className="font-inter-display text-[22px] text-[#333336] underline underline-offset-4 hover:opacity-70 transition-opacity font-medium">
               contact us
             </a>

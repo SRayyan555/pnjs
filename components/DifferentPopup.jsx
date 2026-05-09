@@ -7,7 +7,7 @@ export default function DifferentPopup({ isOpen, onClose, professor }) {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-      <div className="bg-white h-[550px] w-[800px] rounded-[30px] p-8 relative overflow-y-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+      <div className="bg-white md:h-[550px] h-[620px] md:w-[800px] w-auto md:mx-0 mx-2 rounded-[30px] md:p-8 p-4 md:pt-8 pt-[50px] relative overflow-y-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
         <style jsx>{`
           div::-webkit-scrollbar {
             display: none;
@@ -24,19 +24,19 @@ export default function DifferentPopup({ isOpen, onClose, professor }) {
             {professors.map((prof, index) => (
               <div
                 key={index}
-                className="w-[230px] h-[230px] bg-[#eaf0f7] rounded-[20px] flex flex-col items-center justify-center p-4 border-2 border-white"
+                className="md:w-[230px] md:h-[230px] w-[168px] h-[150px] bg-[#eaf0f7] rounded-[20px] flex flex-col items-center justify-center md:p-4 p-2 border-2 border-white"
                 style={{ boxShadow: '8px 8px 20px 4px #98989833' }}
               >
                 <img
                   src={prof.image}
                   alt={prof.name}
-                  className="w-[100px] h-[100px] rounded-full object-cover mb-3"
+                  className="md:w-[100px] md:h-[100px] w-[70px] h-[70px] rounded-full object-cover mb-3"
                 />
 
-                <h3 className="text-[28px] font-inter font-medium leading-[110%] tracking-[-2px] text-black mb-2">{prof.name}</h3>
-                <div className="flex items-center gap-2  w-[210px]">
-                  <img src={prof.schoolLogo} alt={`${prof.school} logo`} className="w-6 h-6 object-contain rounded-sm" />
-                  <p className="text-[14px] text-center text-[#333333] font-regular leading-[140%] font-inter w-auto ">{prof.school}</p>
+                <h3 className="md:text-[28px] text-[18px] font-inter font-medium leading-[110%] tracking-[-2px] text-black mb-2">{prof.name}</h3>
+                <div className="flex items-center gap-2  md:w-[210px]">
+                  <img src={prof.schoolLogo} alt={`${prof.school} logo`} className="md:w-6 md:h-6 w-[12px] h-[12px] object-contain rounded-sm" />
+                  <p className="md:text-[14px] text-[10px] text-center text-[#333333] font-regular leading-[140%] font-inter w-auto ">{prof.school}</p>
 
                   
                 </div>

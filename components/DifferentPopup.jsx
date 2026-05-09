@@ -33,9 +33,9 @@ export default function DifferentPopup({ isOpen, onClose, professor }) {
                   className="w-[100px] h-[100px] rounded-full object-cover mb-3"
                 />
 
-                <h3 className="text-[30px] font-medium leading-[110%] tracking-[-2px] text-black mb-2">{prof.name}</h3>
+                <h3 className="text-[28px] font-inter font-medium leading-[110%] tracking-[-2px] text-black mb-2">{prof.name}</h3>
                 <div className="flex items-center gap-2  w-[210px]">
-                  <img src={prof.schoolLogo} alt={`${prof.school} logo`} className="w-6 h-6 object-contain" />
+                  <img src={prof.schoolLogo} alt={`${prof.school} logo`} className="w-6 h-6 object-contain rounded-sm" />
                   <p className="text-[14px] text-center text-[#333333] font-regular leading-[140%] font-inter w-auto ">{prof.school}</p>
 
                   

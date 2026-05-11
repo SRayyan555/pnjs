@@ -95,7 +95,7 @@ const FaqPopup = () => {
               >
                 <div
                   ref={(el) => (answerRefs.current[index] = el)}
-                  className="font-inter-display md:text-[28px] text-[18px] text-[#8a8a91] font-medium md:px-[20px] pb-[30px]"
+                  className="font-inter-display md:text-[28px] text-[18px] text-[#8a8a91] font-medium md:px-[20px] pb-[30px] whitespace-pre-wrap"
                   style={{ letterSpacing: '-1.3px', lineHeight: '120%' }}
                 >
                   {faq.answer}

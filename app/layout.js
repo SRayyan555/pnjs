@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { brittany } from "./fonts";
 import FaqPopup from "@/components/FaqPopup"; 
+import ApplyPopup from "@/components/ApplyPopup"; 
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -82,6 +83,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer/>
         <FaqPopup/>
+        <ApplyPopup/>
         <HomeButton/>
       </body>
     </html>

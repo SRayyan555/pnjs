@@ -75,6 +75,9 @@ const FooterLink = ({ text }) => {
     if (text === "FAQ") {
       window.dispatchEvent(new Event('openFaqPopup'));
     }
+    if (text === "Apply") {
+      window.dispatchEvent(new Event('openApplyPopup'));
+    }
   };
 
   return (

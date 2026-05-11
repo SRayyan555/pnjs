@@ -46,7 +46,7 @@ const ProfessorPopup = ({ prof, onClose }) => {
         </div>
 
         {/* Right Side: Content */}
-        <div className="flex flex-col flex-grow py-1 font-inter max-h-[320px] md:max-h-[400px] overflow-y-auto overflow-x-hidden pr-2">
+        <div className="flex flex-col flex-grow py-1 font-inter max-h-[320px] md:max-h-[400px] overflow-y-auto overflow-x-hidden pr-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {/* Header Info */}
           <div className="mb-4">
             <h2 className="text-[32px] md:text-[36px] font-semibold text-black leading-tight mb-2">

@@ -1,6 +1,6 @@
 const faqs = [
   {
-    question: "What is sacrosanct as a member of C-Suite Network?",
+    question: "What is sacrosanct as a member of Professional Network?",
     answer: "Intellectually sharp and curious clear thinkers who question assumptions and connect ideas. We are curating those who question, debate, and share.\n\nYou should be willing to share experiences openly and contribute meaningful insights.\n\nRegular participation and attendance is expected. Membership renewal requires attending at least two events annually.\n\nYou would need to respond within 48 hours. Responsiveness to fellow members is essential. Delayed replies or ghosting may affect continued membership.\n\nOur members need to have influence and access to those individuals whose voices carry influence within their social ecosystems. We favour ambitious, restless, forward-looking practice leaders.",
   },
   {

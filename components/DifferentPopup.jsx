@@ -7,7 +7,7 @@ export default function DifferentPopup({ isOpen, onClose, professor }) {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-      <div className="bg-white md:h-[550px] h-[620px] md:w-[800px] w-auto md:mx-0 mx-2 rounded-[30px] md:p-8 p-4 md:pt-8 pt-[50px] relative overflow-y-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+      <div className="bg-white md:h-[570px] h-[620px] md:w-[800px] w-auto md:mx-0 mx-2 rounded-[30px] md:p-8 md:pt-8 pt-[50px] relative overflow-y-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
         <style jsx>{`
           div::-webkit-scrollbar {
             display: none;
@@ -19,12 +19,12 @@ export default function DifferentPopup({ isOpen, onClose, professor }) {
         >
           <RxCross2 size={20} />
         </button>
-        <div className="h-full flex flex-col ">
+        <div className="h-full flex flex-col items-center justify-center">
           <div className="flex flex-wrap gap-4 items-center justify-center">
             {professors.map((prof, index) => (
               <div
                 key={index}
-                className="md:w-[230px] md:h-[230px] w-[168px] h-[150px] bg-[#eaf0f7] rounded-[20px] flex flex-col items-center justify-center md:p-4 p-2 border-2 border-white"
+                className="md:w-[230px] md:h-[230px] w-[180px] h-[150px] bg-[#eaf0f7] rounded-[20px] flex flex-col items-center justify-center md:p-4 p-2 border-2 border-white"
                 style={{ boxShadow: '8px 8px 20px 4px #98989833' }}
               >
                 <img
@@ -38,7 +38,7 @@ export default function DifferentPopup({ isOpen, onClose, professor }) {
                   <img src={prof.schoolLogo} alt={`${prof.school} logo`} className="md:w-6 md:h-6 w-[12px] h-[12px] object-contain rounded-sm" />
                   <p className="md:text-[14px] text-[10px] text-center text-[#333333] font-regular leading-[140%] font-inter w-auto ">{prof.school}</p>
 
-                  
+
                 </div>
               </div>
             ))}

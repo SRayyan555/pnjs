@@ -1,10 +1,14 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
+import ComingSoonPopup from './ComingSoonPopup';
 
 const Footer = () => {
   return (
     <footer className="bg-white border-t flex items-center justify-center flex-col border-zinc-100 font-inter">
+      <ComingSoonPopup eventName="openPrivacyPopup" />
+      <ComingSoonPopup eventName="openTermsPopup" />
+      <ComingSoonPopup eventName="openDisclaimerPopup" />
       <div className="w-full px-6 md:pt-0 pt-[20px] text-[#333336]">
         <div className="grid grid-cols-1 lg:grid-cols-12 md:flex md:justify-between md:gap-12">
 
@@ -51,8 +55,8 @@ const Footer = () => {
           {/* Trademark Info */}
           <div className="mt-10 md:mt-0 p-0 md:p-10 py-2 md:border-r border-[#E6E6E6] flex flex-col justify-center font-inter-display">
             <p className="text-[17px] tracking-[-1px] leading-[120%] text-[#8a8a91]">
-              <Image src="/assets/logo.svg" alt="Professional Network" width={170} height={13} className="inline-block align-baseline mr-1" />
-              is one amongst many networks trademarked and operated by <span className="underline text-[#67686B] font-medium cursor-pointer">Rextone Digital</span> Pvt. Ltd.
+              <Image src="/assets/footer-logo.svg" alt="Professional Network" width={170} height={13} className="inline-block align-baseline mr-1" />
+              is one amongst many networks trademarked and operated by <span onClick={() => window.open("https://rextonedigital.com", "_blank")} className="underline text-[#67686B] font-medium cursor-pointer">Rextone Digital</span> Pvt. Ltd.
             </p>
           </div>
 
@@ -77,6 +81,15 @@ const FooterLink = ({ text }) => {
     }
     if (text === "Apply") {
       window.dispatchEvent(new Event('openApplyPopup'));
+    }
+    if (text === "Privacy Policy") {
+      window.dispatchEvent(new Event('openPrivacyPopup'));
+    }
+    if (text === "Terms of Service") {
+      window.dispatchEvent(new Event('openTermsPopup'));
+    }
+    if (text === "Disclaimer") {
+      window.dispatchEvent(new Event('openDisclaimerPopup'));
     }
   };
 

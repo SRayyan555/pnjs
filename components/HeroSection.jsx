@@ -40,7 +40,7 @@ export default function HeroSection() {
       {/* TEXT */}
       <div className="relative z-10 flex items-center justify-center h-full">
         <h1 className="text-white text-[55px] text-center md:text-left md:text-[120px] font-serif font-semibold tracking-tight">
-          Professionals Network
+          Professional Network
         </h1>
       </div>
 

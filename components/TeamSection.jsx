@@ -1,14 +1,17 @@
+"use client";
+import ComingSoonPopup from './ComingSoonPopup';
+
 export default function TeamSection() {
   const team = [
     {
       name: "Saurabh Goswamy",
-      role: "Founder & CEO",
+      role: "Founder",
       image: "/team/saurabh_goswamy.jpg",
     },
     {
       name: "Anushka",
-      role: "Program Lead",
-      image: "/team/anushka.jpg",
+      role: "Member Experience Lead",
+      image: "/team/anushka.jpg", 
       scale: "scale-140",
     },
     { name: "Zahra", role: "Lead Curator", image: "/team/zahra.png" },
@@ -106,6 +109,7 @@ export default function TeamSection() {
             <div className="flex items-center gap-8 text-lg">
               <a
                 href="#"
+                onClick={(e) => { e.preventDefault(); window.dispatchEvent(new Event('openCareerPopup')); }}
                 className="group relative font-medium font-inter text-2xl md:text-[28px] tracking-[-1.2px] text-[#333336] hover:text-[#C01522] transition"
               >
                 career page
@@ -123,6 +127,7 @@ export default function TeamSection() {
           </div>
         </div>
       </section>
+      <ComingSoonPopup eventName="openCareerPopup" />
     </section>
   );
 }

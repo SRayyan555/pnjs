@@ -40,8 +40,8 @@ const Firstprinciple = () => {
     <section ref={sectionRef} className="md:py-20 pb-[50px] px-4 bg-white font-inter flex flex-col items-center justify-center overflow-hidden ">
       <div className="max-w-7xl mx-auto text-center mb-[50px]">
         <h2 className="text-[35px] md:text-[72px] mb-[30px] tracking-[-0.46px] ">
-          <span className="italic font-medium text-[#656a6b] font-kepler text-[32px] md:text-[72px] leading-[110%] tracking-[-0.46px] align-middle">First</span>{" "}
-          <span className="font-extrabold text-[#c01823] font-mencken text-[32px] md:text-[72px] leading-[110%] tracking-[-0.46px] align-middle">Principles</span>
+          <span className="italic font-medium text-[#656a6b] font-kepler text-[32px] md:text-[72px] leading-[110%] tracking-[-0.46px] align-middle">Deep</span>{""}
+          <span className="font-extrabold text-[#c01823] font-mencken text-[32px] md:text-[72px] leading-[110%] tracking-[-0.46px] align-middle">Learning</span>
         </h2>
         <p className="text-[13px] md:text-[25px] text-[#333333] lg:w-[1080px] md:h-[62px] leading-[120%] font-semibold font-inter ">
           A series of problem solving workshops held by the worlds best professors. The workshops

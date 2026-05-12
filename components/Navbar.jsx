@@ -15,6 +15,9 @@ export default function Navbar() {
     setIsOpen(false);
     if (label === "FAQs") {
       window.dispatchEvent(new Event('openFaqPopup'));
+    } else if (label === "Home") {
+      router.push("/");
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       router.push(path);
     }
@@ -30,7 +33,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="flex justify-between items-start p-4 md:p-8 w-full absolute top-0 left-0 z-40">
-        <div className="flex flex-col leading-tight cursor-pointer" onClick={() => navigateTo("/")}>
+        <div className="flex flex-col leading-tight cursor-pointer" onClick={() => navigateTo("/", "Home")}>
           <Image src={logo} alt="professional network" className="w-40 md:w-auto"/>
         </div>
         <button 

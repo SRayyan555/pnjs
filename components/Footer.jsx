@@ -1,9 +1,11 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import ComingSoonPopup from './ComingSoonPopup';
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <footer className="bg-white border-t flex items-center justify-center flex-col border-zinc-100 font-inter">
       <ComingSoonPopup eventName="openPrivacyPopup" />
@@ -16,17 +18,17 @@ const Footer = () => {
           <div className="md:col-span-7 grid grid-cols-2 md:w-[600px] md:h-[312px] lg:gap-[150px] md:pt-[32px] md:pl-[40px] ">
             {/* Left Navigation */}
             <div className="md:space-y-4 space-y-[16px]">
-              <FooterLink text="Home" />
-              <FooterLink text="About" />
-              <FooterLink text="Apply" />
-              <FooterLink text="FAQ" />
+              <FooterLink text="Home" router={router} />
+              <FooterLink text="About" router={router} />
+              <FooterLink text="Apply" router={router} />
+              <FooterLink text="FAQ" router={router} />
             </div>
 
             {/* Middle Navigation */}
             <div className="md:space-y-4 space-y-[16px]">
-              <FooterLink text="Privacy Policy" />
-              <FooterLink text="Terms of Service" />
-              <FooterLink text="Disclaimer" />
+              <FooterLink text="Privacy Policy" router={router} />
+              <FooterLink text="Terms of Service" router={router} />
+              <FooterLink text="Disclaimer" router={router} />
             </div>
           </div>
 
@@ -71,11 +73,18 @@ const Footer = () => {
   );
 };
 
-const FooterLink = ({ text }) => {
+const FooterLink = ({ text, router }) => {
   const firstLetter = text.charAt(0);
   const restOfText = text.slice(1);
 
   const handleClick = () => {
+    if (text === "Home") {
+      router.push("/");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    if (text === "About") {
+      router.push("/about");
+    }
     if (text === "FAQ") {
       window.dispatchEvent(new Event('openFaqPopup'));
     }

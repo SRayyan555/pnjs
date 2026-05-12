@@ -71,6 +71,7 @@ export const metadata = {
 };
 
 import HomeButton from "@/components/HomeButton";
+import RefreshRedirect from "@/components/RefreshRedirect";
 
 export default function RootLayout({ children }) {
   return (
@@ -79,6 +80,7 @@ export default function RootLayout({ children }) {
         className={`${brittany.variable} ${geistSans.variable} ${geistMono.variable} ${inter.variable} ${interTight.variable} ${playfair.variable} antialiased`}
         >
 
+        <RefreshRedirect/>
         <Navbar/>
         {children}
         <Footer/>

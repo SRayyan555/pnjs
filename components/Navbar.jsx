@@ -35,7 +35,7 @@ export default function Navbar() {
         </div>
         <button 
           onClick={toggleMenu}
-          className="z-50 p-2 group"
+          className="fixed top-4 right-4 md:top-8 md:right-8 z-50 p-2 group"
           aria-label="Toggle Menu"
         >
           <div className="w-12 h-1 bg-red-600 mb-2 transition-all"></div>

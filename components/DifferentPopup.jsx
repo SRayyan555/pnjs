@@ -6,7 +6,7 @@ export default function DifferentPopup({ isOpen, onClose, professor }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/40 backdrop-blur-sm">
       <div className="bg-white md:h-[570px] h-[620px] md:w-[800px] w-auto md:mx-0 mx-2 rounded-[30px] md:p-8 md:pt-8 pt-[50px] relative overflow-y-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
         <style jsx>{`
           div::-webkit-scrollbar {

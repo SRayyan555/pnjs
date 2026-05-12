@@ -28,9 +28,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex justify-between items-start p-8 w-full absolute top-0 left-0 z-40">
+      <nav className="flex justify-between items-start p-4 md:p-8 w-full absolute top-0 left-0 z-40">
         <div className="flex flex-col leading-tight cursor-pointer" onClick={() => navigateTo("/")}>
-          <Image src="/nav-logo.svg" alt="Professional Network" width={223} height={60} className="h-8 w-auto md:h-10" />
+          <Image src={logo} alt="professional network" className="w-40 md:w-auto"/>
         </div>
         <button 
           onClick={toggleMenu}
@@ -65,7 +65,7 @@ export default function Navbar() {
               <button 
                 key={option.label}
                 onClick={() => navigateTo(option.path, option.label)}
-                className="text-white font-[family-name:var(--font-inter-display)] font-[500] text-[28px] leading-[120%] tracking-[-0.04em] text-right hover:opacity-70 transition-opacity"
+                className="text-white font-inter-display font-medium text-[28px] leading-[120%] tracking-[-0.04em] text-right hover:opacity-70 transition-opacity"
               >
                 {option.label}
               </button>

@@ -102,7 +102,7 @@ const ProfessorCard = ({ prof, onClick }) => {
 
       {/* Content Area */}
       <div className="p-2 md:p-5 flex flex-col items-center text-center flex-grow bg-white w-full">
-        <div className="flex items-center justify-center h-[44px] md:h-[80px] w-full mb-[5px] md:mb-[10px]">
+        <div className="flex items-center justify-center h-auto w-full mb-[5px] md:mb-[10px]">
           <p className="prof-topic text-[11px] md:text-[18px] font-medium leading-[1.2] text-[#333333] font-inter-display tracking-[-0.5px]">
             {prof.name === "Jonathan Levav" ? prof.topic.split(" by")[0] : prof.topic}
           </p>

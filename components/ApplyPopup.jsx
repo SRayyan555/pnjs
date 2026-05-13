@@ -87,16 +87,16 @@ const ApplyPopup = () => {
 
                 {/* Form content */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-                  <FormField label="First Name*" placeholder="First Name" />
-                  <FormField label="Last Name*" placeholder="Last Name" />
-                  <FormField label="Email*" placeholder="Email" />
-                  <FormField label="Linkedin Profile" placeholder="Linkedin Profile" />
-                  <FormField label="Contact Number*" placeholder="Contact Number" />
+                  <FormField label="First Name*" placeholder="First Name" minLength={2} />
+                  <FormField label="Last Name*" placeholder="Last Name" minLength={2} />
+                  <FormField label="Email*" placeholder="Email" type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" />
+                  <FormField label="Linkedin Profile" placeholder="Linkedin Profile" type="url" pattern=".*linkedin.*" />
+                  <FormField label="Contact Number*" placeholder="Contact Number" type="tel" pattern="[0-9]*" />
                   <FormField label="City*" placeholder="City" />
-                  <FormField label="Company Name" placeholder="Company Name" />
-                  <FormField label="Your title in the company" placeholder="Your title in the company" />
+                  <FormField label="Company Name" placeholder="Company Name" minLength={2} />
+                  <FormField label="Your title in the company" placeholder="Your title in the company" minLength={2} />
                   <FormField label="Years of cumulative experience*" placeholder="Years of cumulative experience" isSelect={true} />
-                  <FormField label="Company website" placeholder="Company website" />
+                  <FormField label="Company website" placeholder="Company website" type="url" />
                 </div>
 
                 {/* Submit Button Section */}
@@ -114,7 +114,7 @@ const ApplyPopup = () => {
   );
 };
 
-const FormField = ({ label, isSelect = false }) => {
+const FormField = ({ label, isSelect = false, type = "text", pattern, minLength }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
   const options = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10+"];
@@ -126,7 +126,9 @@ const FormField = ({ label, isSelect = false }) => {
         onClick={() => isSelect && setIsOpen(!isOpen)}
       >
         <input
-          type="text"
+          type={type}
+          pattern={pattern}
+          minLength={minLength}
           onKeyDown={(e) => isSelect && e.preventDefault()}
           placeholder={label}
           value={value}

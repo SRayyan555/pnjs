@@ -42,8 +42,8 @@ export const professors = [
     school: "IMD Switzerland",
     image: "/professor-profile/gautam.png",
     schoolLogo: "/professor-school/gautam-school.png",
-    linkedinLink: "https://www.linkedin.com/in/daveweiner2",
-    schoolLink: "https://www.berkeley.edu/",
+    linkedinLink: "https://www.linkedin.com/in/goutam-challagalla-161118bb",
+    schoolLink: "https://imd.org/faculty/professors/goutam-challagalla/",
     location: "Mumbai",
     description: ""
   },

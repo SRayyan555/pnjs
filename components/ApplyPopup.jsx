@@ -12,6 +12,14 @@ const ApplyPopup = () => {
     return () => window.removeEventListener('openApplyPopup', handleOpen);
   }, []);
 
+  // Auto-open when ?apply=true is in the URL
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('apply') === 'true') {
+      setIsOpen(true);
+    }
+  }, []);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';

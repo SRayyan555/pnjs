@@ -113,7 +113,7 @@ const ProfessorCard = ({ prof, onClick }) => {
           <img
             src={prof.schoolLogo}
             alt=""
-            className="w-[15px] h-[15px] md:w-[30px] md:h-[30px] rounded-[2px] md:rounded-[4px] object-contain flex-shrink-0"
+            className="w-3.75 h-3.75 md:w-[30px] md:h-[30px] rounded-xs md:rounded-[4px] object-contain flex-shrink-0"
           />
           <span className="text-[11px] md:text-[19px] leading-[1.2] tracking-[-0.5px] font-regular text-black font-inter text-left">
             {prof.school}

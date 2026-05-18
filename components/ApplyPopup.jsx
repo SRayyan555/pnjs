@@ -122,7 +122,7 @@ const ApplyPopup = () => {
   );
 };
 
-const FormField = ({ label, isSelect = false, type = "text", pattern, minLength }) => {
+const FormField = ({ label, isSelect = false, type = "text", pattern, minLength ,placeholder}) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
   const options = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10+"];
